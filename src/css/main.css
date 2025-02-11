@@ -1,0 +1,196 @@
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+:root {
+  --ff-main: "Space Mono", Arial, serif;
+  --bg-main: #222222;
+  --bg-second: #232323;
+  --bg-card: #252525;
+  --input-border: 1px solid rgba(211, 211, 211, 0.322);
+  --card-border: 1px solid rgba(211, 211, 211, 0.315);
+  --ft-borderTop: 1px dashed rgba(211, 211, 211, 0.37);
+}
+html {
+  color-scheme: dark light;
+  font-family: var(--ff-main);
+}
+*,
+*::after,
+*::before {
+  box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* MARK: header and nav */
+header {
+  padding: 0.5rem;
+  background-color: var(--bg-main);
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+nav h2 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+nav h2 > img {
+  padding: 0 1rem;
+  border-radius: 20px;
+}
+#userDate {
+  padding-inline: 1rem;
+  font-weight: 600;
+  text-decoration: underline;
+  font-family: monospace, "Space Mono", serif;
+}
+
+/* MARK: main section and all child sections inside */
+.sect__container {
+  width: 75%;
+  margin-inline: auto;
+  text-align: center;
+}
+.create__form {
+  display: block;
+  margin-top: 5rem;
+}
+.create__form > input[type="text"] {
+  padding: 0.5rem;
+  width: 25rem;
+  border: var(--input-border);
+  border-radius: 16px;
+  transition: border ease-in 100ms;
+}
+.create__form > input[type="text"]:hover {
+  border: 1px solid rgba(211, 211, 211, 0.548);
+}
+.create__form > button {
+  background-color: var(--bg-second);
+  padding: 8px 16px;
+  border: var(--input-border);
+  border-radius: 16px;
+  transition: border ease-in 100ms;
+}
+.create__form > button:hover {
+  background-color: #646464;
+  border: var(--input-border);
+}
+.output__form {
+  width: 45%;
+  margin-top: 3rem;
+  text-align: left;
+}
+.output__form > * {
+  margin: 1.5rem auto;
+}
+
+/* MARK: cards of todoapp */
+.cards {
+  list-style-type: none;
+}
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background-color: var(--bg-card);
+  padding: 2rem;
+  border: var(--card-border);
+  border-radius: 16px;
+  box-shadow: 4px 4px 2px 0 rgba(211, 211, 211, 0.096);
+  transition: border ease-in 100ms;
+  margin: 1rem 0;
+}
+.card:hover {
+  border: 1px solid rgba(211, 211, 211, 0.548);
+}
+.card > p {
+  overflow-wrap: break-word;
+  width: 100%;
+}
+.card__options {
+  display: flex;
+  gap: 1.5rem;
+  scale: 1.2;
+  align-items: center;
+}
+.card__options > .fa-trash,
+.card__options > .fa-pen-to-square {
+  cursor: pointer;
+  transition: scale ease-in-out 150ms;
+}
+.card__options > p:hover {
+  scale: 1.4;
+}
+
+/* MARK: footer section */
+footer {
+  background-color: var(--bg-main);
+  width: 100%;
+  margin-top: 5rem;
+  position: fixed;
+  bottom: 0;
+  padding: 0.5rem 0;
+  text-align: center;
+  border-top: var(--ft-borderTop);
+}
+footer > p {
+  opacity: 0.75;
+}
+
+/* MARK: prefers light or dark */
+@media (prefers-color-scheme: light) {
+  :root {
+    --ff-main: "Space Mono", Arial, serif;
+    --bg-main: #fff;
+    --bg-second: #202020;
+    --bg-card: #fff;
+    --input-border: 1px solid rgb(0, 0, 0);
+    --card-border: 1px solid rgb(0, 0, 0);
+    --ft-borderTop: 1px dashed rgb(0, 0, 0);
+  }
+  .create__form > button {
+    background-color: var(--bg-second);
+    color: #fff;
+    padding: 8px 16px;
+    border: var(--input-border);
+    border-radius: 16px;
+    transition: border ease-in 100ms;
+  }
+  .create__form > button:hover {
+    background-color: #646464;
+    border: var(--input-border);
+  }
+}
+
+/* MARK: media query's */
+@media only screen and (max-width: 40em) {
+  nav > h2 {
+    width: max-content;
+    margin: 0 auto;
+  }
+  nav > h2 > img {
+    display: none;
+  }
+  .sect__container {
+    width: 90%;
+  }
+  .create__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .create__form > input[type="text"] {
+    width: auto;
+  }
+  .create__form > i {
+    display: none;
+  }
+  .card {
+    gap: 2rem;
+  }
+}

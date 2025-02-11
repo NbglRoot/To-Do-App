@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do Root</title>
+    <link
+      rel="shortcut icon"
+      href="public/img/favicon/logo.png"
+      type="image/x-icon"
+    />
+    <link rel="canonical" href="index.html" />
+    <meta
+      name="description"
+      content="To-Do App by Naim Babanaceur García de Lara. Proyecto realizado para la comprobación y practica de las tecnologias HTML5, CSS3, JS y TS."
+    />
+
+    <!-- MARK: css -->
+    <link rel="stylesheet" href="src/css/main.css" />
+    <link rel="stylesheet" href="src/css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- MARK: scripts -->
+    <script defer src="src/js/main.js"></script>
+    <script
+      defer
+      src="https://kit.fontawesome.com/259098186a.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="animate__animated animate__fadeInDown animate__slower">
+      <nav>
+        <h2>
+          <a href="https://www.github.com/NbglRoot" target="_blank">
+            <img
+              style="width: 48px"
+              src="public/img/favicon/logo.png"
+              alt="icon of the creator of the web app"
+          /></a>
+          To-Do Root
+        </h2>
+        <p id="userDate"></p>
+      </nav>
+    </header>
+    <main>
+      <section class="sect__container create__form">
+        <i class="fa-solid fa-marker animate__animated animate__bounce"></i>
+        <input type="text" spellcheck="true" placeholder="nueva tarea..." />
+        <button type="button" title="click!">
+          Guardar Tarea <i class="fa-solid fa-angle-right"></i>
+        </button>
+      </section>
+      <section class="sect__container output__form">
+        <h4>Tareas:</h4>
+        <ul class="cards"></ul>
+      </section>
+    </main>
+    <footer class="animate__animated animate__fadeInUp">
+      <p>Naim Babanaceur García de Lara &copy; MIT License - 2025</p>
+    </footer>
+  </body>
+</html>
