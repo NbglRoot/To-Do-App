@@ -18,3 +18,4 @@ en-EN: Simple To-Do Application, using the good practices proposed by the W3C, E
 <br>
 <br>
 
+Link to <a href="https://nbglroot.github.io/To-Do-App/" target="_blank">App</a>
