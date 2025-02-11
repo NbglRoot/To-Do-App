@@ -17,7 +17,7 @@ window.addEventListener("load", function () {
 // user current date
 var displayDate = document.querySelector("#userDate");
 var date = new Date();
-displayDate.textContent = "".concat(date.getDate(), " / ").concat(date.getMonth(), " / ").concat(date.getFullYear());
+displayDate.textContent = "".concat(date.getDate(), " / ").concat(date.getMonth() + 1, " / ").concat(date.getFullYear());
 // create cards
 var inputNewTask = document.querySelector(".create__form > input");
 var buttonAddTask = document.querySelector(".create__form > button");
