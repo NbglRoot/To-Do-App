@@ -1,4 +1,21 @@
 // main animation for header and footer
+if (sessionStorage.getItem("heading_footer")) {
+  document
+    .querySelector("header")
+    ?.classList.remove(
+      "animate__animated",
+      "animate__fadeInDown",
+      "animate__slower"
+    );
+  document
+    .querySelector("footer")
+    ?.classList.remove(
+      "animate__animated",
+      "animate__fadeInDown",
+      "animate__slower"
+    );
+} else {
+}
 window.addEventListener("load", () => {
   if (
     document.querySelector("header") !== null &&
@@ -6,25 +23,6 @@ window.addEventListener("load", () => {
   ) {
     sessionStorage.setItem("heading_footer", "displayed");
   }
-  if (sessionStorage.getItem("heading_footer")) {
-    document
-      .querySelector("header")
-      ?.classList.remove(
-        "animate__animated",
-        "animate__fadeInDown",
-        "animate__slower"
-      );
-    document
-      .querySelector("footer")
-      ?.classList.remove(
-        "animate__animated",
-        "animate__fadeInDown",
-        "animate__slower"
-      );
-  }
-});
-window.addEventListener("beforeunload", () => {
-  sessionStorage.removeItem("heading_footer");
 });
 
 // user current date

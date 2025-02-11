@@ -1,19 +1,18 @@
+var _a, _b;
 // main animation for header and footer
+if (sessionStorage.getItem("heading_footer")) {
+    (_a = document
+        .querySelector("header")) === null || _a === void 0 ? void 0 : _a.classList.remove("animate__animated", "animate__fadeInDown", "animate__slower");
+    (_b = document
+        .querySelector("footer")) === null || _b === void 0 ? void 0 : _b.classList.remove("animate__animated", "animate__fadeInDown", "animate__slower");
+}
+else {
+}
 window.addEventListener("load", function () {
-    var _a, _b;
     if (document.querySelector("header") !== null &&
         document.querySelector("footer") !== null) {
         sessionStorage.setItem("heading_footer", "displayed");
     }
-    if (sessionStorage.getItem("heading_footer")) {
-        (_a = document
-            .querySelector("header")) === null || _a === void 0 ? void 0 : _a.classList.remove("animate__animated", "animate__fadeInDown", "animate__slower");
-        (_b = document
-            .querySelector("footer")) === null || _b === void 0 ? void 0 : _b.classList.remove("animate__animated", "animate__fadeInDown", "animate__slower");
-    }
-});
-window.addEventListener("beforeunload", function () {
-    sessionStorage.removeItem("heading_footer");
 });
 // user current date
 var displayDate = document.querySelector("#userDate");
