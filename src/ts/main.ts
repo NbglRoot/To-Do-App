@@ -28,7 +28,9 @@ window.addEventListener("load", () => {
 // user current date
 const displayDate = document.querySelector("#userDate") as HTMLParagraphElement;
 const date: Date = new Date();
-displayDate.textContent = `${date.getDate()} / ${date.getMonth()} / ${date.getFullYear()}`;
+displayDate.textContent = `${date.getDate()} / ${
+  date.getMonth() + 1
+} / ${date.getFullYear()}`;
 
 // create cards
 const inputNewTask = document.querySelector(
