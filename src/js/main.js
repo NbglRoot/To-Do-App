@@ -14,6 +14,9 @@ window.addEventListener("load", function () {
         sessionStorage.setItem("heading_footer", "displayed");
     }
 });
+window.addEventListener("beforeunload", function (e) {
+    localStorage.setItem("savedTasks", cardsHolder.innerHTML);
+});
 // user current date
 var displayDate = document.querySelector("#userDate");
 var date = new Date();
@@ -61,6 +64,14 @@ editTask.forEach(function (iconE) {
         }
     });
 });
+var paraHTML = document.querySelectorAll(".card");
+paraHTML.forEach(function (p) {
+    p.addEventListener("click", function (e) {
+        var _a;
+        var target = e.target;
+        (_a = target.firstElementChild) === null || _a === void 0 ? void 0 : _a.classList.toggle("finished");
+    });
+});
 function createCard(descTask) {
     var _a, _b;
     if (descTask == "" || descTask == null) {
@@ -71,6 +82,7 @@ function createCard(descTask) {
         newCard.classList.add("card");
         var cardDesc = document.createElement("p");
         cardDesc.innerText = descTask;
+        cardDesc.classList.add("not__finished");
         var options = document.createElement("div");
         options.classList.add("card__options");
         var deleteCard = document.createElement("p");

@@ -112,6 +112,11 @@ nav h2 > img {
   overflow-wrap: break-word;
   width: 100%;
 }
+.finished::before {
+  position: relative;
+  content: "☑";
+  padding-right: 1rem;
+}
 .card__options {
   display: flex;
   gap: 1.5rem;
