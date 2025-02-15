@@ -15,6 +15,4 @@ en-EN: Simple To-Do Application, using the good practices proposed by the W3C, E
   ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 <br>
 <br>
-<br>
-<br>
-
+Hoisting: <br> ![Github Pages](https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white)
